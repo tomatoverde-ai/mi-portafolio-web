@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Index.css">
+</head>
+<body>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-title">Navegación</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio" onclick="toggleMenu()">Inicio</a></li>
+                <li><a href="#poderes" onclick="toggleMenu()">Poderes</a></li>
+                <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-container">
+        <header class="header-fijo">
+            <h1 class="titulo-fijo">Mi portfolio 👻</h1>
+            <div class="status-badge">Dana Luna Chavéz</div>
+        </header>
+
+        <section class="bento-grid">
+            <article class="card zona-foto" id="perfil">
+                <div class="profile-img">
+                    <img src="./CARA.jpg" alt="Dana Luna">
+                </div>
+                <div class="info">
+                    <h2>Dana Luna</h2>
+                    <p class="tagline">Software Developer & Artist</p>
+                    <p class="desc">Transformando el caos creativo en código funcional.</p>
+                </div>
+            </article> 
+
+            <article class="card" id="h1">
+                <div class="card-content">
+                    <span class="emoji">🎨</span>
+                    <h3>Habilidad 01</h3>
+                    <p>Dibujo tradicional con enfoque contemporáneo.</p>
+                </div>
+            </article>
+
+            <article class="card" id="h2">
+                <div class="card-content">
+                    <span class="emoji">📖</span>
+                    <h3>Habilidad 02</h3>
+                    <p>Análisis crítico y alta comprensión lectora.</p>
+                </div>
+            </article>
+
+            <article class="card" id="h3">
+                <div class="card-content">
+                    <span class="emoji">🤝</span>
+                    <h3>Habilidad 03</h3>
+                    <p>Comunicación asertiva y trabajo en equipo.</p>
+                </div>
+            </article>
+
+            <article class="card" id="h4">
+                <div class="card-content">
+                    <span class="emoji">✨</span>
+                    <h3>Filosofía</h3>
+                    <p class="quote">"Ay pos, ya que. 💜 "</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
